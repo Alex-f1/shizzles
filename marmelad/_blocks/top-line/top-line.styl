@@ -1,0 +1,212 @@
+.top-line
+  height: 150px
+  background-color: rgba(255, 255, 255, 0.63)
+  backdrop-filter: blur(38px)
+  position: relative
+  z-index: 100
+
+  @media (max-width: 959px)
+    height: 75px
+
+  &__section
+    height: 100%
+
+  &__inner
+    display: flex
+    align-items: center
+    justify-content: space-between
+    max-width: 1840px + 40px + 40px
+    width: 100%
+    height: 100%
+    padding-right: 40px
+    padding-left: 40px
+    margin-right: auto
+    margin-left: auto
+
+    @media (max-width: 1099px)
+      padding-right: 25px
+      padding-left: 25px
+
+  &__left
+    width: 33.333%
+    display: flex
+    align-items: center
+
+    @media (max-width: 1099px)
+      flex-direction: column
+      align-items: flex-start
+
+    @media (max-width: 959px)
+      order: 1
+      align-items: flex-end
+
+    @media (max-width: 959px)
+      flex: 0 0 35px
+      width: 35px
+      max-width: 35px
+
+  &__middle
+    width: 22%
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    @media (max-width: 959px)
+      flex: 0 0 100px
+      width: 100px
+      max-width: 100px
+
+  &__right
+    width: 33.333%
+    display: flex
+    align-items: center
+    justify-content: flex-end
+
+    @media (max-width: 959px)
+      order: -1
+      justify-content: flex-start
+
+    @media (max-width: 959px)
+      flex: 0 0 35px
+      width: 35px
+      max-width: 35px
+
+    .social-links
+      margin-left: auto
+
+      @media (max-width: 959px)
+        display: none
+
+      &__item
+        margin-right: 20px
+
+        @media (max-width: 1099px)
+          margin-right: 10px
+
+  &__button-connect
+    flex: 0 0 215px
+    width: 215px
+    max-width: 215px
+    margin-right: 20px
+
+    @media (max-width: 1099px)
+      flex: none
+      margin-right: 0
+      margin-bottom: 10px
+
+    @media (max-width: 959px)
+      display: none
+
+    &:before
+      content: ''
+      flex: 0 0 17px
+      max-width: 17px
+      width: 17px
+      height: 22px
+      margin-right: 15px
+      background-image: url("data:image/svg+xml,%3Csvg width='17' height='22' viewBox='0 0 17 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.4171 6.51662C16.507 4.80712 16.7545 3.03013 16.5745 1.34312C16.5745 1.32062 16.5745 1.32062 16.5745 1.29813C16.6644 1.09569 16.5745 0.803271 16.2821 0.780778C16.642 0.780778 15.9446 0.690804 15.8323 0.690804C15.3374 0.690804 14.865 0.66831 14.3701 0.66831C12.7956 0.645817 11.2211 0.623323 9.64651 0.60083C6.85731 0.555843 4.04562 0.398388 1.25643 0.60083C1.09897 0.623323 0.986507 0.690804 0.94152 0.848258C0.94152 0.848258 0.94152 0.848258 0.94152 0.825765C0.919027 0.848258 0.919027 0.870752 0.919027 0.893245C0.806559 0.915739 0.694092 0.983219 0.671598 1.14067C0.536637 2.13039 0.784066 3.25506 0.784066 4.26727C0.784066 4.94208 0.244222 8.18114 0.49165 8.38358C0.446663 8.33859 0.356689 8.36109 0.356689 8.45106C0.356689 8.58602 0.356689 8.72098 0.379183 8.85595C0.401676 9.17085 0.761572 9.30582 0.986507 9.12587C1.30142 9.26083 1.77378 9.26083 2.02121 9.28332C3.01092 9.39579 4.00064 9.44078 4.99035 9.46327C5.14781 9.46327 5.28277 9.3733 5.37274 9.26083C5.41773 9.19335 5.44022 9.10337 5.44022 9.03589C5.44022 9.03589 5.44022 9.0134 5.46271 9.0134C5.55269 8.49605 5.59768 7.9787 5.62017 7.46135C5.62017 7.25891 5.66516 7.01148 5.68765 6.78654C7.48713 8.18114 9.10666 9.82317 10.6362 11.5102C8.83678 13.1522 7.2397 14.9517 5.57518 16.6612C5.64266 15.8514 5.80012 14.9292 5.5077 14.2094C5.44022 14.0519 5.26027 13.9845 5.12531 14.007C4.58547 13.782 3.95565 13.962 3.39331 13.9845C2.53856 14.0295 1.66131 14.007 0.806559 14.097C0.604118 14.1194 0.514144 14.2994 0.559131 14.4569C0.42417 15.649 0.446663 16.8636 0.49165 18.0783C0.514144 19.0006 0.289209 20.3052 0.739079 21.1374C0.829053 21.2949 1.03149 21.3173 1.16646 21.2274C3.79819 21.7447 6.45243 21.4073 9.1067 21.1824C11.3336 21.0024 14.0552 21.8122 16.1697 21.0474C16.1921 21.0474 16.2146 21.0249 16.2371 21.0249C16.3946 21.1149 16.6645 21.0249 16.642 20.8C16.2596 17.9208 16.4396 14.8842 16.3496 11.96C16.3046 10.1156 16.3271 8.3161 16.4171 6.51662Z' fill='white'/%3E%3C/svg%3E%0A")
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: 0 0
+
+  &__button-video
+    flex: 0 0 165px
+    width: 165px
+    max-width: 165px
+    display: flex
+    align-items: center
+
+    @media (max-width: 1099px)
+      flex: none
+
+    @media (max-width: 959px)
+      display: none
+
+    &:before
+      content: ''
+      flex: 0 0 39px
+      max-width: 39px
+      width: 39px
+      height: 40px
+      margin-right: 10px
+      background-image: url("data:image/svg+xml,%3Csvg width='39' height='40' viewBox='0 0 39 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M29.25 20L14.625 27.9625V11.875L29.25 20Z' stroke='%2320B01D' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M19.5 36.25C28.4746 36.25 35.75 28.9746 35.75 20C35.75 11.0254 28.4746 3.75 19.5 3.75C10.5254 3.75 3.25 11.0254 3.25 20C3.25 28.9746 10.5254 36.25 19.5 36.25Z' stroke='%23849AAE' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: 0 0
+
+    span
+      font-size: 16px
+      line-height: 1
+      color: #364151
+      font-weight: 700
+      text-decoration: underline
+      transition: color 0.3s, ease 0.3s
+
+    &:hover
+      span
+        color: #20B01D
+
+  &__button-more
+    display: block
+    width: 18px
+    height: 21px
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='21' viewBox='0 0 18 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.9171 6.01662C17.007 4.30712 17.2545 2.53013 17.0745 0.843116C17.0745 0.820622 17.0745 0.820622 17.0745 0.798129C17.1644 0.595687 17.0745 0.303271 16.7821 0.280778C17.142 0.280778 16.4446 0.190804 16.3323 0.190804C15.8374 0.190804 15.365 0.16831 14.8701 0.16831C13.2956 0.145817 11.7211 0.123323 10.1465 0.10083C7.35731 0.0558429 4.54562 -0.101612 1.75643 0.10083C1.59897 0.123323 1.48651 0.190804 1.44152 0.348258C1.44152 0.348258 1.44152 0.348258 1.44152 0.325765C1.41903 0.348258 1.41903 0.370752 1.41903 0.393245C1.30656 0.415739 1.19409 0.483219 1.1716 0.640674C1.03664 1.63039 1.28407 2.75506 1.28407 3.76727C1.28407 4.44208 0.744222 7.68114 0.99165 7.88358C0.946663 7.83859 0.856689 7.86109 0.856689 7.95106C0.856689 8.08602 0.856689 8.22098 0.879183 8.35595C0.901676 8.67085 1.26157 8.80582 1.48651 8.62587C1.80142 8.76083 2.27378 8.76083 2.52121 8.78332C3.51092 8.89579 4.50064 8.94078 5.49035 8.96327C5.64781 8.96327 5.78277 8.8733 5.87274 8.76083C5.91773 8.69335 5.94022 8.60337 5.94022 8.53589C5.94022 8.53589 5.94022 8.5134 5.96271 8.5134C6.05269 7.99605 6.09768 7.4787 6.12017 6.96135C6.12017 6.75891 6.16516 6.51148 6.18765 6.28654C7.98713 7.68114 9.60666 9.32317 11.1362 11.0102C9.33678 12.6522 7.7397 14.4517 6.07518 16.1612C6.14266 15.3514 6.30012 14.4292 6.0077 13.7094C5.94022 13.5519 5.76027 13.4845 5.62531 13.507C5.08547 13.282 4.45565 13.462 3.89331 13.4845C3.03856 13.5295 2.16131 13.507 1.30656 13.597C1.10412 13.6194 1.01414 13.7994 1.05913 13.9569C0.92417 15.149 0.946663 16.3636 0.99165 17.5783C1.01414 18.5006 0.789209 19.8052 1.23908 20.6374C1.32905 20.7949 1.53149 20.8173 1.66646 20.7274C4.29819 21.2447 6.95243 20.9073 9.6067 20.6824C11.8336 20.5024 14.5552 21.3122 16.6697 20.5474C16.6921 20.5474 16.7146 20.5249 16.7371 20.5249C16.8946 20.6149 17.1645 20.5249 17.142 20.3C16.7596 17.4208 16.9396 14.3842 16.8496 11.46C16.8046 9.61558 16.8271 7.8161 16.9171 6.01662Z' fill='%2320B01D'/%3E%3C/svg%3E%0A")
+    background-repeat: no-repeat
+    background-position: 0 0
+    background-size: contain
+
+    @media (min-width: 960px)
+      display: none
+
+  &__date
+    font-size: 16px
+    color: #364151
+    font-weight: 700
+    line-height: 1
+    text-align: center
+    transform: translateY(20px)
+
+    @media (max-width: 959px)
+      display: none
+
+    span
+      color: #20b01d
+
+  &__language
+    margin-left: 130px
+
+    @media (max-width: 1599px)
+      margin-left: 75px
+
+    @media (max-width: 1099px)
+      margin-left: 25px
+
+    @media (max-width: 959px)
+      margin-left: 0
+
+  &__language-link
+    text-decoration: none
+    display: flex
+    align-items: center
+
+    span
+      font-size: 16px
+      color: #364151
+      font-weight: 700
+      line-height: 1
+
+      @media (max-width: 959px)
+        display: none
+
+  &__language-icon
+    flex: 32px
+    width: 32px
+    max-width: 32px
+    height: 32px
+    margin-right: 12px
+
+    @media (max-width: 959px)
+      flex: 25px
+      width: 25px
+      max-width: 25px
+      height: 25px

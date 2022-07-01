@@ -1,2 +1,97 @@
 .header
-  flex none
+  flex: none
+  position: relative
+
+  &:after
+    content: ''
+    top: 100%
+    left: 50%
+    transform: translateX(-50%)
+    position: absolute
+    width: 410px
+    height: 20px
+    background-color: rgba(255, 255, 255, 0.8)
+    backdrop-filter: blur(38px)
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%)
+
+    @media (max-width: 959px)
+      display: none
+
+  &__mobile-panel
+    position: absolute
+    top: -150px
+    width: 100%
+    background-color: rgba(255, 255, 255, 0.63)
+    backdrop-filter: blur(38px)
+    border-radius: 0 0 50px 50px
+    padding: 15px 20px 20px 20px
+    display: flex
+    flex-direction: column
+    align-items: center
+    opacity: 0
+    visibility: hidden
+    transition: opacity 0.3s, top 0.3s, ease 0.3s
+
+    @media (min-width: 960px)
+      display: none
+
+    &._is-show
+      top: 100%
+      opacity: 1
+      visibility: visible
+
+  &__button-connect
+    max-width: 215px
+    margin-bottom: 20px
+
+    &:before
+      content: ''
+      flex: 0 0 17px
+      max-width: 17px
+      width: 17px
+      height: 22px
+      margin-right: 15px
+      background-image: url("data:image/svg+xml,%3Csvg width='17' height='22' viewBox='0 0 17 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.4171 6.51662C16.507 4.80712 16.7545 3.03013 16.5745 1.34312C16.5745 1.32062 16.5745 1.32062 16.5745 1.29813C16.6644 1.09569 16.5745 0.803271 16.2821 0.780778C16.642 0.780778 15.9446 0.690804 15.8323 0.690804C15.3374 0.690804 14.865 0.66831 14.3701 0.66831C12.7956 0.645817 11.2211 0.623323 9.64651 0.60083C6.85731 0.555843 4.04562 0.398388 1.25643 0.60083C1.09897 0.623323 0.986507 0.690804 0.94152 0.848258C0.94152 0.848258 0.94152 0.848258 0.94152 0.825765C0.919027 0.848258 0.919027 0.870752 0.919027 0.893245C0.806559 0.915739 0.694092 0.983219 0.671598 1.14067C0.536637 2.13039 0.784066 3.25506 0.784066 4.26727C0.784066 4.94208 0.244222 8.18114 0.49165 8.38358C0.446663 8.33859 0.356689 8.36109 0.356689 8.45106C0.356689 8.58602 0.356689 8.72098 0.379183 8.85595C0.401676 9.17085 0.761572 9.30582 0.986507 9.12587C1.30142 9.26083 1.77378 9.26083 2.02121 9.28332C3.01092 9.39579 4.00064 9.44078 4.99035 9.46327C5.14781 9.46327 5.28277 9.3733 5.37274 9.26083C5.41773 9.19335 5.44022 9.10337 5.44022 9.03589C5.44022 9.03589 5.44022 9.0134 5.46271 9.0134C5.55269 8.49605 5.59768 7.9787 5.62017 7.46135C5.62017 7.25891 5.66516 7.01148 5.68765 6.78654C7.48713 8.18114 9.10666 9.82317 10.6362 11.5102C8.83678 13.1522 7.2397 14.9517 5.57518 16.6612C5.64266 15.8514 5.80012 14.9292 5.5077 14.2094C5.44022 14.0519 5.26027 13.9845 5.12531 14.007C4.58547 13.782 3.95565 13.962 3.39331 13.9845C2.53856 14.0295 1.66131 14.007 0.806559 14.097C0.604118 14.1194 0.514144 14.2994 0.559131 14.4569C0.42417 15.649 0.446663 16.8636 0.49165 18.0783C0.514144 19.0006 0.289209 20.3052 0.739079 21.1374C0.829053 21.2949 1.03149 21.3173 1.16646 21.2274C3.79819 21.7447 6.45243 21.4073 9.1067 21.1824C11.3336 21.0024 14.0552 21.8122 16.1697 21.0474C16.1921 21.0474 16.2146 21.0249 16.2371 21.0249C16.3946 21.1149 16.6645 21.0249 16.642 20.8C16.2596 17.9208 16.4396 14.8842 16.3496 11.96C16.3046 10.1156 16.3271 8.3161 16.4171 6.51662Z' fill='white'/%3E%3C/svg%3E%0A")
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: 0 0
+
+  &__button-video
+    max-width: 165px
+    display: flex
+    align-items: center
+
+    &:before
+      content: ''
+      flex: 0 0 39px
+      max-width: 39px
+      width: 39px
+      height: 40px
+      margin-right: 10px
+      background-image: url("data:image/svg+xml,%3Csvg width='39' height='40' viewBox='0 0 39 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M29.25 20L14.625 27.9625V11.875L29.25 20Z' stroke='%2320B01D' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M19.5 36.25C28.4746 36.25 35.75 28.9746 35.75 20C35.75 11.0254 28.4746 3.75 19.5 3.75C10.5254 3.75 3.25 11.0254 3.25 20C3.25 28.9746 10.5254 36.25 19.5 36.25Z' stroke='%23849AAE' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: 0 0
+
+    span
+      font-size: 16px
+      line-height: 1
+      color: #364151
+      font-weight: 700
+      text-decoration: underline
+      transition: color 0.3s, ease 0.3s
+
+    &:hover
+      span
+        color: #20B01D
+
+  &__date
+    font-size: 16px
+    color: #364151
+    font-weight: 700
+    line-height: 1
+    text-align: center
+    margin-bottom: 15px
+
+    span
+      color: #20b01d
