@@ -1,8 +1,14 @@
 .first-screen
-  height: 100%
+  height: calc(100vh - 150px)
+
+  @media (max-width: 959px)
+    height: auto
 
   &__section, &__inner
     height: 100%
+
+    @media (max-width: 959px)
+      height: auto
 
   &__social
     position: absolute
