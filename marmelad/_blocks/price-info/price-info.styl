@@ -1,0 +1,197 @@
+.price-info
+  padding-top: 50px
+  position: relative
+  z-index: 5
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 9.37%, #F0F6FE 67.82%, #FFFFFF 100%)
+
+  @media (max-width: 1599px)
+    background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 9.37%, #F0F6FE 55.11%, #FFFFFF 100%)
+
+  @media (max-width: 959px)
+    padding-top: 25px
+    padding-bottom: 25px
+
+  &__inner
+    max-width: 1630px
+    width: 100%
+    margin-left: auto
+    margin-right: auto
+
+    @media (max-width: 1599px)
+      max-width: 1240px
+
+  &__wrapper
+    position: relative
+
+    &:after
+      content: ''
+      position: absolute
+      width: 965px
+      height: 30px
+      left: 50%
+      top: 100%
+      transform: translateX(-50%)
+      background-color: #A6B5CC
+      filter: blur(44px)
+
+      @media (max-width: 959px)
+        display: none
+
+  &__title
+    font-size: 40px
+    color: #364151
+    font-weight: 900
+    line-height: 1.1
+    text-align: center
+    margin-bottom: 30px
+
+    @media (max-width: 767px)
+      font-size: 30px
+      margin-bottom: 20px
+
+  &__table
+    padding: 50px 40px
+    position: relative
+    z-index: 5
+    background-color: #fff
+
+    @media (min-width: 960px)
+      border: 1px solid #fff
+      background-color: rgba(255, 255, 255, 0.25)
+      backdrop-filter: blur(39px)
+      border-radius: 44px
+
+    @media (max-width: 1599px)
+      background-color: rgba(255, 255, 255, 0.51)
+
+    @media (max-width: 959px)
+      padding-top: 0
+      padding-bottom: 0
+      padding-right: 15px
+      padding-left: 15px
+
+    table
+      width: 100%
+      border-spacing: 0 20px
+
+      thead
+        th
+          font-size: 18px
+          color: #849AAE
+          font-family: $fonts.secondary
+          font-weight: 700
+          line-height: 1.1
+          text-align: left
+          padding: 18px 8px
+          width: 20%
+
+          @media (max-width: 767px)
+            font-size: 10px
+            padding-top: 0
+            padding-bottom: 0
+
+    tbody
+      tr
+        position: relative
+
+        &:after
+          content: ''
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+          box-shadow: 0px -4px 11px rgba(255, 255, 255, 0.97), 0px 4px 8px #CCDCF2
+          background: rgba(234, 241, 251, 0.22)
+          border-radius: 14px
+
+          @media (max-width: 1599px)
+            background-color: #EAF1FB
+
+        td
+          font-size: 18px
+          color: #849aae
+          font-family: $fonts.secondary
+          font-weight: 700
+          line-height: 1.1
+          width: 20%
+          padding: 18px 8px
+          position: relative
+          z-index: 2
+
+          @media (max-width: 767px)
+            font-size: 12px
+
+          &:first-child
+            span
+              display: flex
+              align-items: center
+
+              i
+                width: 16px
+                height: 16px
+                display: inline-block
+                vertical-align: top
+                background-image: url("data:image/svg+xml,%3Csvg width='15' height='16' viewBox='0 0 15 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.90752 4.2014C5.06352 4.06707 5.23035 3.9414 5.40802 3.8244C5.59002 3.7074 5.78502 3.60557 5.99302 3.5189C6.20535 3.43224 6.43285 3.36507 6.67552 3.3174C6.92252 3.2654 7.18685 3.2394 7.46852 3.2394C7.85852 3.2394 8.21168 3.29357 8.52802 3.4019C8.84435 3.5059 9.11518 3.65757 9.34052 3.8569C9.56585 4.0519 9.73918 4.28807 9.86052 4.5654C9.98618 4.84274 10.049 5.15257 10.049 5.4949C10.049 5.82424 10.0013 6.11024 9.90602 6.3529C9.81502 6.59124 9.69802 6.79924 9.55502 6.9769C9.41635 7.15457 9.26252 7.3084 9.09352 7.4384C8.92452 7.5684 8.76418 7.68974 8.61252 7.8024C8.46085 7.91507 8.32868 8.02774 8.21602 8.1404C8.10768 8.24874 8.04052 8.37007 8.01452 8.5044L7.85202 9.4339H6.62352L6.50002 8.3809C6.46968 8.1729 6.49568 7.99307 6.57802 7.8414C6.66035 7.6854 6.77085 7.54457 6.90952 7.4189C7.04818 7.2889 7.20202 7.1654 7.37102 7.0484C7.54435 6.92707 7.70468 6.79924 7.85202 6.6649C8.00368 6.52624 8.12935 6.3724 8.22902 6.2034C8.33302 6.03007 8.38502 5.8264 8.38502 5.5924C8.38502 5.3064 8.28535 5.0789 8.08602 4.9099C7.89102 4.7409 7.63102 4.6564 7.30602 4.6564C7.06768 4.6564 6.86618 4.6824 6.70152 4.7344C6.54118 4.7864 6.40252 4.8449 6.28552 4.9099C6.16852 4.97057 6.06885 5.0269 5.98652 5.0789C5.90418 5.1309 5.82618 5.1569 5.75252 5.1569C5.58785 5.1569 5.46435 5.0854 5.38202 4.9424L4.90752 4.2014ZM6.12302 11.8324C6.12302 11.6894 6.14902 11.5551 6.20102 11.4294C6.25735 11.2994 6.33318 11.1889 6.42852 11.0979C6.52385 11.0026 6.63435 10.9289 6.76002 10.8769C6.89002 10.8206 7.03085 10.7924 7.18252 10.7924C7.32985 10.7924 7.46852 10.8206 7.59852 10.8769C7.72852 10.9289 7.84118 11.0026 7.93652 11.0979C8.03185 11.1889 8.10552 11.2994 8.15752 11.4294C8.21385 11.5551 8.24202 11.6894 8.24202 11.8324C8.24202 11.9797 8.21385 12.1162 8.15752 12.2419C8.10552 12.3676 8.03185 12.4781 7.93652 12.5734C7.84118 12.6644 7.72852 12.7359 7.59852 12.7879C7.46852 12.8399 7.32985 12.8659 7.18252 12.8659C7.03085 12.8659 6.89002 12.8399 6.76002 12.7879C6.63435 12.7359 6.52385 12.6644 6.42852 12.5734C6.33318 12.4781 6.25735 12.3676 6.20102 12.2419C6.14902 12.1162 6.12302 11.9797 6.12302 11.8324Z' fill='%2320B01D'/%3E%3Crect x='0.5' y='0.774902' width='14' height='14' rx='7' stroke='%2320B01D'/%3E%3C/svg%3E%0A")
+                background-repeat: no-repeat
+                background-position: 0 0
+                margin-right: 5px
+
+  &__elements-bg
+    @media (max-width: 959px)
+      display: none
+
+  &__element-bg
+    display: block
+    position: absolute
+    z-index: 1
+
+  .coin-pic
+    top: -100px
+    left: 40px
+
+    @media (max-width: 1599px)
+      top: auto
+      bottom: -85px
+      left: -100px
+
+    @media (max-width: 1439px)
+      display: none
+
+  .coin-pic2
+    top: -50px
+    right: 60px
+
+    @media (max-width: 1599px)
+      top: -70px
+      right: 90px
+
+  .cash-pic
+    bottom: -140px
+    left: 20px
+
+    @media (max-width: 1599px)
+      top: -90px
+      left: 40px
+      bottom: auto
+
+  .cash-pic2
+    bottom: -55px
+    right: 15px
+
+    @media (max-width: 1599px)
+      right: 70px
+
+  .green-circle
+    top: -40%
+    left: -45%
+
+    @media (max-width: 1599px)
+      display: none
+
+  .orange-circle
+    top: -100%
+    right: -40%
+
+    @media (max-width: 1599px)
+      display: none
