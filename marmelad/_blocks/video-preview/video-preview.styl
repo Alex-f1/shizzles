@@ -1,0 +1,170 @@
+.video-preview
+  padding-top: 100px
+  padding-bottom: 100px
+  overflow: hidden
+
+  @media (max-width: 959px)
+    padding-top: 50px
+    padding-bottom: 50px
+
+  &._is-play-video
+    & ^[0]
+      &__video
+        &:before
+          opacity: 0
+          visibility: hidden
+
+        video, iframe
+          opacity: 1
+          visibility: visible
+
+      &__video-poster
+        opacity: 0
+        visibility: hidden
+
+      &__button-play
+        opacity: 0
+        visibility: hidden
+
+      &__bg-person
+        z-index: -1
+
+  &__inner
+    max-width: 1180px + 15px + 15px
+    width: 100%
+    padding-right: 15px
+    padding-left: 15px
+    margin-left: auto
+    margin-right: auto
+    position: relative
+
+  &__title
+    font-size: 40px
+    color: #364151
+    font-weight: 900
+    line-height: 1.1
+    text-align: center
+    margin-bottom: 25px
+
+    @media (max-width: 767px)
+      font-size: 30px
+      margin-bottom: 20px
+
+  &__video
+    max-width: 760px
+    width: 100%
+    height: 430px
+    border: 20px solid #DBE6F6
+    border-radius: 35px
+    margin-right: auto
+    margin-left: auto
+    position: relative
+    overflow: hidden
+
+    @media (max-width: 479px)
+      height: 230px
+
+    img, video, iframe
+      width: 100%
+      height: 100%
+      vertical-align: top
+      object-fit: cover
+      position: absolute
+      top: 0
+      left: 0
+
+    video, iframe
+      position: relative
+      z-index: 1
+      opacity: 0
+      visibility: hidden
+      transition: opacity 1.5s, ease 1.5s
+      display block !important
+
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55))
+      z-index: 3
+
+  &__video-poster
+    position: relative
+    z-index: 2
+    transition: opacity 1s, ease 1s
+
+  &__button-play
+    width: 140px
+    height: 140px
+    background-color: rgba(255, 255, 255, 0.21)
+    backdrop-filter: blur(22px)
+    border: none
+    border-radius: 50%
+    background-image: url("data:image/svg+xml,%3Csvg width='68' height='79' viewBox='0 0 68 79' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M66 35.9358C68.6667 37.4754 68.6667 41.3244 66 42.864L6 77.505C3.33334 79.0446 3.88244e-06 77.1201 4.01704e-06 74.0409L7.04545e-06 4.75888C7.18005e-06 1.67968 3.33334 -0.244817 6.00001 1.29478L66 35.9358Z' fill='white'/%3E%3C/svg%3E%0A")
+    background-repeat: no-repeat
+    background-position: 65% 50%
+    background-size: 68px 79px
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    cursor: pointer
+    z-index: 4
+    transition: opacity 0.5s, ease 0.5s
+
+    @media (max-width: 479px)
+      width: 105px
+      height: 105px
+      background-position: 55% 50%
+      background-size: 34px 39px
+
+  &__bg
+    @media (max-width: 1023px)
+      display: none
+
+  &__bg-circle
+    width: 317px
+    height: 317px
+    position: absolute
+    bottom: 30px
+    z-index: -1
+
+    img
+      vertical-align: top
+
+    &--blue
+      left: 80px
+
+      @media (max-width: 1279px)
+        left: 20px
+
+    &--purple
+      right: 80px
+
+      @media (max-width: 1279px)
+        right: 20px
+
+  &__bg-person
+    width: 330px
+    height: 300px
+    position: absolute
+    bottom: 90px
+    z-index: 6
+
+    img
+      vertical-align: top
+
+    &--blue
+      left: 15px
+
+      @media (max-width: 1279px)
+        left: -40px
+
+    &--purple
+      right: 15px
+
+      @media (max-width: 1279px)
+        right: -40px
