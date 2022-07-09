@@ -38,7 +38,7 @@ html
   cursor: pointer
   padding: 15px
   min-width: 85px
-  transition: background-color 0.3s, ease 0.3s
+  transition: transform .5s cubic-bezier(.2,3,.4,1) 0s, background-color: 0.3s, ease 0.3s
 
   span
     font-size: 18px
@@ -47,3 +47,4 @@ html
 
   &:hover
     background-color: darken(#20B01D, 15%)
+    transform: scale(1.1)

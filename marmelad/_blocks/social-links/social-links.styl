@@ -8,9 +8,13 @@
     width: 40px
     max-width: 40px
     height: 40px
+    transition: transform 0.5s cubic-bezier(0.2, 3, 0.4, 1) 0s
 
     &:last-child
       margin-right: 0
 
     img
       vertical-align: top
+
+    &:hover
+      transform: scale(1.1)
