@@ -38,13 +38,69 @@ html
   cursor: pointer
   padding: 15px
   min-width: 85px
-  transition: transform .5s cubic-bezier(.2,3,.4,1) 0s, background-color: 0.3s, ease 0.3s
+  transition: transform 0.5s cubic-bezier(0.2, 3, 0.4, 1) 0s, background-color 0.3s, ease 0.3s
 
   span
     font-size: 18px
     font-weight: 700
     line-height: 1
 
+  &--popup
+    min-width: 125px
+    padding-right: 20px
+    padding-left: 20px
+    border-radius: 15px
+    margin-right: auto
+    margin-left: auto
+    position: relative
+
+    span
+      font-size: 20px
+      font-family: $fonts.extra
+      line-height: 1
+
+    &:after
+      content: ''
+      width: 95px
+      height: 44px
+      position: absolute
+      bottom: -18px
+      left: 50%
+      transform: translateX(-50%)
+      background-color: #20B01D
+      opacity: 0.5
+      border-radius: 0 0 50% 50%
+      filter: blur(10px)
+      z-index: -1
+
   &:hover
     background-color: darken(#20B01D, 15%)
     transform: scale(1.1)
+
+.remodal
+  max-width: 515px
+  background-color: #FFFFFF
+  box-shadow: 0px 4px 20px rgba(64, 181, 66, 0.27)
+  border-radius: 20px
+  padding: 30px
+
+.remodal-overlay
+  opacity: 1
+  background-color: rgba(59, 92, 116, 0.21)
+  backdrop-filter: blur(5px)
+
+.remodal-close
+  top: 5px
+  right: 5px
+
+  &:before
+    content: ''
+    width: 16px
+    height: 16px
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='20.3098' height='1.85519' rx='0.927596' transform='matrix(0.707107 0.707107 -0.697767 0.716325 1.32153 0)' fill='%2320B01D'/%3E%3Crect width='20.3446' height='1.85519' rx='0.927596' transform='matrix(0.707107 -0.707107 0.697767 0.716325 0.276855 14.3882)' fill='%2320B01D'/%3E%3C/svg%3E%0A")
+    background-position: 0 0
+    background-repeat: no-repeat
+    background-size: contain
