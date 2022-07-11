@@ -1,0 +1,44 @@
+= yaml =
+pageTitle: SHIZZLES
+bodyClasses:
+layout: !!map
+  header: false
+  footer: false
+  left: false
+  right: false
+= yaml =
+
+{% extends 'app.html' %}
+
+
+
+{% block main %}
+
+  <div block="connect-block">
+    <div elem="section">
+      <div elem="inner">
+        <form elem="form">
+          <div elem="container">
+            <div elem="greeting-name">Привет, 0X9f...9e7a!</div>
+            <div elem="desc">
+              Чтобы продолжить, Вам нужно ввести <br>
+              код приглашения:
+            </div>
+            <div elem="field">
+              <input type="text" placeholder="Введите код">
+              <span elem="error">Введенный код приглашения не работает, попробуйте другой</span>
+            </div>
+            <button elem="button-ready" class="button-default button-default--popup" type="submit">
+              <span>Готово</span>
+            </button>
+          </div>
+        </form>
+        <div elem="bottom">
+          <a elem="link" href="#">Terms nad Conditions</a>
+          <span>*мы не связаны с Axie infinity, Sky Marvis, BAYC, Azuki</span>
+        </div>
+      </div>
+    </div>
+  </div><!-- connect-block -->
+
+{% endblock %}

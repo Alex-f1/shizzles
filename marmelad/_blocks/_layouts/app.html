@@ -46,8 +46,10 @@
             {% endif %}
 
         </div><!-- app:wrapper -->
-
-        {% include "popup-note.html" %}
+        
+        {% if popupNote %}
+            {% include "popup-note.html" %}
+        {% endif %}
 
 		{{ inlineSvgSprite() }}
 
