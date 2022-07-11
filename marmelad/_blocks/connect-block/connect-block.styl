@@ -9,6 +9,26 @@
   @media (max-width: 1099px)
     background-position: 50% 0
 
+  @media (max-height: 599px)
+    height: auto
+
+  &--enter
+    & ^[0]
+      &__section
+        @media (max-height: 750px)
+          padding-top: 0
+
+      &__inner
+        @media (max-height: 750px)
+          padding-top: 0
+          padding-bottom: 0
+
+      &__logo
+        margin-bottom: 50px
+
+        @media (max-height: 750px)
+          margin-bottom: 0
+
   &__section
     padding: 25px
     height: 100%
@@ -92,10 +112,12 @@
     &:hover
       text-decoration: none
 
+.enter-block
+  width: 100%
+  margin-bottom: 20px
+
   &__form
     width: 100%
-    margin-top: auto
-    margin-bottom: auto
 
   &__container
     max-width: 440px
