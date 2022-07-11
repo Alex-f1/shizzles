@@ -21,7 +21,7 @@
     background-color: #EAF1FB
     box-shadow: 0px -4px 11px rgba(255, 255, 255, 0.97), 0px 4px 8px #CCDCF2
     border-radius: 14px
-    margin-right: 10px
+    margin-right: 20px
 
     @media (max-width: 767px)
       flex: none
@@ -53,11 +53,6 @@
       @media (max-width: 767px)
         order: 1
 
-    &--right
-      & ^[0]
-        &__note
-          margin-bottom: 20px
-
     &:last-child
       margin-right: 0
 
@@ -65,6 +60,8 @@
     width: 100%
     height: 100%
     position: relative
+    display: flex
+    flex-direction: column
 
   &__user-info
     display: flex
@@ -115,7 +112,8 @@
         text-decoration: none
 
   &__code
-    padding: 15px 10px 10px 10px
+    padding: 15px 10px 0 10px
+    margin-top: auto
 
     strong
       font-size: 14px
@@ -129,6 +127,8 @@
   &__control
     display: flex
     padding-top: 10px
+    padding-bottom: 10px
+    margin-top: auto
 
   &__control-link
     font-size: 16px
