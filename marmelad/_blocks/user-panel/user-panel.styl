@@ -1,0 +1,290 @@
+.user-panel
+  width: 100%
+
+  &__inner
+    max-width: 1100px + 15px + 15px
+    width: 100%
+    padding-right: 15px
+    padding-left: 15px
+    margin-right: auto
+    margin-left: auto
+
+  &__info
+    display: flex
+
+    @media (max-width: 767px)
+      flex-direction: column
+
+  &__col
+    min-height: 145px
+    padding: 10px
+    background-color: #EAF1FB
+    box-shadow: 0px -4px 11px rgba(255, 255, 255, 0.97), 0px 4px 8px #CCDCF2
+    border-radius: 14px
+    margin-right: 10px
+
+    @media (max-width: 767px)
+      flex: none
+      width: 100% !important
+      max-width: 100% !important
+      margin-right: 0
+      margin-bottom: 20px
+      min-height: auto
+
+    &--left, &--right
+      flex: 0 0 250px
+      width: 250px
+      max-width: 250px
+
+    &--left
+      & ^[0]
+        &__note
+          @media (min-width: 768px)
+            position: absolute
+            bottom: 0
+            left: 10px
+
+          @media (max-width: 767px)
+            margin-top: 5px
+
+    &--middle
+      width: 56%
+
+      @media (max-width: 767px)
+        order: 1
+
+    &--right
+      & ^[0]
+        &__note
+          margin-bottom: 20px
+
+    &:last-child
+      margin-right: 0
+
+  &__body
+    width: 100%
+    height: 100%
+    position: relative
+
+  &__user-info
+    display: flex
+    align-items: center
+    padding-top: 5px
+
+  &__user-pic
+    flex: 0 0 78px
+    width: 78px
+    max-width: 78px
+    height: 78px
+    margin-right: 8px
+
+  &__greeting-name
+    color: #364151
+    font-family: $fonts.secondary
+
+    span
+      font-weight: 400
+      font-size: 16px
+      line-height: 1.1
+      display: block
+      margin-bottom: 5px
+
+    strong
+      font-size: 20px
+      font-weight: 700
+      line-height: 1.1
+      display: block
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+
+  &__note
+    font-size: 16px
+    color: #849AAE
+    font-family: $fonts.secondary
+    font-weight: 400
+    line-height: 1.2
+    margin-bottom: 10px
+
+    a
+      font-size: 16px
+      font-weight: 400
+      color: #20b01d
+
+      &:hover
+        text-decoration: none
+
+  &__code
+    padding: 15px 10px 10px 10px
+
+    strong
+      font-size: 14px
+      color: #364151
+      font-family: $fonts.secondary
+      font-weight: 700
+      line-height: 1.1
+      margin-bottom: 10px
+      display: block
+
+  &__control
+    display: flex
+    padding-top: 10px
+
+  &__control-link
+    font-size: 16px
+    color: #323E3B
+    font-family: $fonts.secondary
+    font-weight: 400
+    line-height: 1
+    text-decoration: none
+    display: flex
+    align-items: center
+    margin-right: 50px
+    transition: color 0.3s, ease 0.3s
+
+    &:hover
+      color: #20b01d
+
+    &:before
+      content: ''
+      margin-right: 5px
+      background-repeat: no-repeat
+      background-position: 0 0
+      background-size: contain
+
+    &--copy
+      &:before
+        flex: 0 0 24px
+        width: 24px
+        max-width: 24px
+        height: 25px
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.02393 4.25C7.02393 3.284 7.80793 2.5 8.77393 2.5H20.2499C21.2159 2.5 21.9999 3.284 21.9999 4.25V15.748C21.9999 16.2121 21.8156 16.6572 21.4874 16.9854C21.1592 17.3136 20.7141 17.498 20.2499 17.498H8.77393C8.3098 17.498 7.86468 17.3136 7.53649 16.9854C7.2083 16.6572 7.02393 16.2121 7.02393 15.748V4.25ZM8.77393 4C8.70762 4 8.64403 4.02634 8.59715 4.07322C8.55026 4.12011 8.52393 4.1837 8.52393 4.25V15.748C8.52393 15.887 8.63593 15.998 8.77393 15.998H20.2499C20.3162 15.998 20.3798 15.9717 20.4267 15.9248C20.4736 15.8779 20.4999 15.8143 20.4999 15.748V4.25C20.4999 4.1837 20.4736 4.12011 20.4267 4.07322C20.3798 4.02634 20.3162 4 20.2499 4H8.77393Z' fill='%2320B01D'/%3E%3Cpath d='M1.99512 11.249C1.99499 11.0191 2.04015 10.7915 2.12804 10.579C2.21593 10.3666 2.34481 10.1736 2.50733 10.011C2.66984 9.84835 2.86281 9.71936 3.07519 9.63135C3.28758 9.54335 3.51522 9.49805 3.74512 9.49805H5.25012C5.44903 9.49805 5.6398 9.57706 5.78045 9.71772C5.9211 9.85837 6.00012 10.0491 6.00012 10.248C6.00012 10.447 5.9211 10.6377 5.78045 10.7784C5.6398 10.919 5.44903 10.998 5.25012 10.998H3.74512C3.67881 10.998 3.61522 11.0244 3.56834 11.0713C3.52146 11.1182 3.49512 11.1817 3.49512 11.248L3.50012 20.75C3.50012 20.888 3.61112 21 3.75012 21H13.2501C13.3164 21 13.38 20.9737 13.4269 20.9268C13.4738 20.8799 13.5001 20.8164 13.5001 20.75V19.24C13.5001 19.0411 13.5791 18.8504 13.7198 18.7097C13.8604 18.5691 14.0512 18.49 14.2501 18.49C14.449 18.49 14.6398 18.5691 14.7804 18.7097C14.9211 18.8504 15.0001 19.0411 15.0001 19.24V20.75C15.0001 21.2142 14.8157 21.6593 14.4876 21.9875C14.1594 22.3157 13.7142 22.5 13.2501 22.5H3.75012C3.28599 22.5 2.84087 22.3157 2.51268 21.9875C2.18449 21.6593 2.00012 21.2142 2.00012 20.75L1.99512 11.249Z' fill='%2320B01D'/%3E%3C/svg%3E%0A")
+
+    &--edit
+      &:before
+        flex: 0 0 18px
+        width: 18px
+        max-width: 18px
+        height: 18px
+        background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.09082 8.18182V4.90909C4.09082 4.45724 4.45715 4.09091 4.909 4.09091H8.18173C8.39871 4.09091 8.6068 4.17715 8.76024 4.33058L17.7602 13.3306C18.0797 13.6501 18.0797 14.1681 17.7602 14.4877L14.4875 17.7604C14.3341 17.9138 14.126 18 13.909 18C13.692 18 13.4839 17.9138 13.3305 17.7603L4.33049 8.76033C4.177 8.60695 4.09082 8.3988 4.09082 8.18182ZM5.72718 7.84293L13.909 16.0247L16.0247 13.9091L7.84284 5.72727H5.72718V7.84293Z' fill='%2320B01D'/%3E%3Cpath d='M17.1818 9.81813C16.73 9.81813 16.3636 9.4518 16.3636 8.99994V1.63636H1.63636V16.3636H9C9.45185 16.3636 9.81818 16.73 9.81818 17.1818C9.81818 17.6337 9.45185 18 9 18H0.818182C0.366327 18 0 17.6337 0 17.1818V0.818182C0 0.366327 0.366327 0 0.818182 0H17.1818C17.6337 0 18 0.366327 18 0.818182V8.99994C18 9.45185 17.6337 9.81813 17.1818 9.81813Z' fill='%2320B01D'/%3E%3C/svg%3E%0A")
+
+  &__number
+    font-family: $fonts.extra
+    color: #364151
+    font-weight: 700
+    margin-right: 15px
+    display: flex
+    align-items: flex-end
+    padding-left: 10px
+
+    strong
+      font-style: normal
+      font-size: 45px
+      line-height: 0.7
+
+    small
+      font-size: 16px
+      line-height: 1
+
+  &__button-inc
+    @media (max-width: 767px)
+      margin-right: 0
+
+    &:after
+      display: none
+
+  &__table
+    position: relative
+    z-index: 5
+
+    table
+      width: 100%
+      border-spacing: 0 20px
+
+      thead
+        th
+          font-size: 16px
+          color: #849AAE
+          font-family: $fonts.secondary
+          font-weight: 700
+          line-height: 1.1
+          text-align: left
+          padding: 5px 8px
+          width: 20%
+
+          @media (max-width: 767px)
+            font-size: 10px
+            padding-top: 0
+            padding-bottom: 0
+
+    tbody
+      tr
+        position: relative
+        background-color: #EAF1FB
+        transition: background-color 0.3s, ease 0.3s
+
+        &:after
+          content: ''
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+          box-shadow: 0px -4px 11px rgba(255, 255, 255, 0.97), 0px 4px 8px #CCDCF2
+          border-radius: 42px
+          transition: box-shadow 0.3s, filter 0.3s, ease 0.3s
+
+          @media (max-width: 767px)
+            border-radius: 14px
+
+        &:hover
+          background-color: #CBD6E8
+
+          &:after
+            box-shadow: none
+            filter: none
+
+        td
+          font-size: 16px
+          color: #849aae
+          font-family: $fonts.secondary
+          font-weight: 700
+          line-height: 1.1
+          width: 20%
+          padding: 18px 8px
+          position: relative
+          z-index: 2
+
+          @media (max-width: 767px)
+            font-size: 12px
+
+          @media (max-width: 374px)
+            font-size: 10px
+            padding-right: 5px
+            padding-left: 5px
+
+          &:first-child
+            border-radius: 42px 0 0 42px
+
+            @media (max-width: 767px)
+              border-radius: 14px 0 0 14px
+
+            span
+              display: flex
+              align-items: center
+
+              i
+                width: 16px
+                height: 16px
+                display: inline-block
+                vertical-align: top
+                background-image: url("data:image/svg+xml,%3Csvg width='15' height='16' viewBox='0 0 15 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.90752 4.2014C5.06352 4.06707 5.23035 3.9414 5.40802 3.8244C5.59002 3.7074 5.78502 3.60557 5.99302 3.5189C6.20535 3.43224 6.43285 3.36507 6.67552 3.3174C6.92252 3.2654 7.18685 3.2394 7.46852 3.2394C7.85852 3.2394 8.21168 3.29357 8.52802 3.4019C8.84435 3.5059 9.11518 3.65757 9.34052 3.8569C9.56585 4.0519 9.73918 4.28807 9.86052 4.5654C9.98618 4.84274 10.049 5.15257 10.049 5.4949C10.049 5.82424 10.0013 6.11024 9.90602 6.3529C9.81502 6.59124 9.69802 6.79924 9.55502 6.9769C9.41635 7.15457 9.26252 7.3084 9.09352 7.4384C8.92452 7.5684 8.76418 7.68974 8.61252 7.8024C8.46085 7.91507 8.32868 8.02774 8.21602 8.1404C8.10768 8.24874 8.04052 8.37007 8.01452 8.5044L7.85202 9.4339H6.62352L6.50002 8.3809C6.46968 8.1729 6.49568 7.99307 6.57802 7.8414C6.66035 7.6854 6.77085 7.54457 6.90952 7.4189C7.04818 7.2889 7.20202 7.1654 7.37102 7.0484C7.54435 6.92707 7.70468 6.79924 7.85202 6.6649C8.00368 6.52624 8.12935 6.3724 8.22902 6.2034C8.33302 6.03007 8.38502 5.8264 8.38502 5.5924C8.38502 5.3064 8.28535 5.0789 8.08602 4.9099C7.89102 4.7409 7.63102 4.6564 7.30602 4.6564C7.06768 4.6564 6.86618 4.6824 6.70152 4.7344C6.54118 4.7864 6.40252 4.8449 6.28552 4.9099C6.16852 4.97057 6.06885 5.0269 5.98652 5.0789C5.90418 5.1309 5.82618 5.1569 5.75252 5.1569C5.58785 5.1569 5.46435 5.0854 5.38202 4.9424L4.90752 4.2014ZM6.12302 11.8324C6.12302 11.6894 6.14902 11.5551 6.20102 11.4294C6.25735 11.2994 6.33318 11.1889 6.42852 11.0979C6.52385 11.0026 6.63435 10.9289 6.76002 10.8769C6.89002 10.8206 7.03085 10.7924 7.18252 10.7924C7.32985 10.7924 7.46852 10.8206 7.59852 10.8769C7.72852 10.9289 7.84118 11.0026 7.93652 11.0979C8.03185 11.1889 8.10552 11.2994 8.15752 11.4294C8.21385 11.5551 8.24202 11.6894 8.24202 11.8324C8.24202 11.9797 8.21385 12.1162 8.15752 12.2419C8.10552 12.3676 8.03185 12.4781 7.93652 12.5734C7.84118 12.6644 7.72852 12.7359 7.59852 12.7879C7.46852 12.8399 7.32985 12.8659 7.18252 12.8659C7.03085 12.8659 6.89002 12.8399 6.76002 12.7879C6.63435 12.7359 6.52385 12.6644 6.42852 12.5734C6.33318 12.4781 6.25735 12.3676 6.20102 12.2419C6.14902 12.1162 6.12302 11.9797 6.12302 11.8324Z' fill='%2320B01D'/%3E%3Crect x='0.5' y='0.774902' width='14' height='14' rx='7' stroke='%2320B01D'/%3E%3C/svg%3E%0A")
+                background-repeat: no-repeat
+                background-position: 0 0
+                margin-right: 5px
+
+          &:last-child
+            border-radius: 0 42px 42px 0
+
+            @media (max-width: 767px)
+              border-radius: 0 14px 14px 0

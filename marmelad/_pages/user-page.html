@@ -1,0 +1,30 @@
+= yaml =
+pageTitle: SHIZZLES
+bodyClasses:
+layout: !!map
+  header: false
+  footer: false
+  left: false
+  right: false
+= yaml =
+
+{% extends 'app.html' %}
+
+
+
+{% block main %}
+
+  <div block="connect-block" mods="user">
+    <div elem="section">
+      <div elem="inner">
+        <div elem="logo"><img src="img/logo.png" alt=""></div>
+        {% include "user-panel.html" %}
+        <div elem="bottom">
+          <a elem="link" href="#">Terms nad Conditions</a>
+          <span>*мы не связаны с Axie infinity, Sky Marvis, BAYC, Azuki</span>
+        </div>
+      </div>
+    </div>
+  </div><!-- connect-block -->
+
+{% endblock %}
