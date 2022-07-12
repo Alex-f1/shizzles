@@ -26,4 +26,17 @@ if (window.NodeList && !NodeList.prototype.forEach) {
  * ========================================================================== */
 $(function() {
   //=require ../_blocks/**/*.js
+  
+  function notSupportedBrowser() {
+    let sUsrAg = navigator.userAgent;
+    let setNotSupported = $('body');
+
+    if (sUsrAg.indexOf("Firefox") > -1) {
+      setNotSupported.addClass('_is-not-supported-browser');
+    } else if (sUsrAg.indexOf("Opera") > -1) {
+      setNotSupported.addClass('_is-not-supported-browser');
+    }
+  }
+
+  notSupportedBrowser();
 });

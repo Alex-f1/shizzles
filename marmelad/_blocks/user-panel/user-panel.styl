@@ -220,8 +220,6 @@
     tbody
       tr
         position: relative
-        background-color: #EAF1FB
-        transition: background-color 0.3s, ease 0.3s
 
         &:after
           content: ''
@@ -238,7 +236,8 @@
             border-radius: 14px
 
         &:hover
-          background-color: #CBD6E8
+          td
+            background-color: #CBD6E8
 
           &:after
             box-shadow: none
@@ -251,9 +250,11 @@
           font-weight: 700
           line-height: 1.1
           width: 20%
+          background-color: #EAF1FB
           padding: 18px 8px
           position: relative
           z-index: 2
+          transition: background-color 0.3s, ease 0.3s
 
           @media (max-width: 767px)
             font-size: 12px

@@ -3,15 +3,27 @@
   padding-bottom: 100px
   position: relative
   z-index: 5
-  background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 9.37%, #F0F6FE 67.82%, #FFFFFF 100%)
-
-  @media (max-width: 1599px)
-    background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 9.37%, #F0F6FE 55.11%, #FFFFFF 100%)
 
   @media (max-width: 959px)
     padding-top: 25px
     padding-bottom: 50px
     background: none
+
+  &:after
+    content: ''
+    position: absolute
+    top: -900px
+    left: 50%
+    transform: translateX(-50%)
+    width: 100%
+    height: 100%
+    background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 9.37%, #F0F6FE 67.82%, #FFFFFF 100%)
+
+    @media (max-width: 1599px)
+      background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 9.37%, #F0F6FE 55.11%, #FFFFFF 100%)
+
+    @media (max-width: 959px)
+      display: none
 
   &__inner
     max-width: 1630px

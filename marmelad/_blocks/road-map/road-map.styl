@@ -1,6 +1,8 @@
 .road-map
   padding-top: 50px
   padding-bottom: 50px
+  position: relative
+  z-index: 6
 
   @media (max-width: 767px)
     padding-top: 25px
@@ -142,11 +144,17 @@
     z-index: 2
     transition: transform 0.5s cubic-bezier(0.2, 3, 0.4, 1) 0s
 
+    @media (max-width: 1279px)
+      transform: translateX(-70px)
+
+    @media (max-width: 1023px)
+      transform: translateX(-40px)
+
     @media (max-width: 959px)
       max-width: 340px
 
     &:hover
-      transform: scale(1.1)  
+      transform: scale(1.1)
 
   &__note
     font-size: 15px
