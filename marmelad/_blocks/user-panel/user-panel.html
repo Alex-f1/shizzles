@@ -2,7 +2,8 @@
   <div elem="section">
     <div elem="inner">
       <div elem="info">
-        <div elem="col" mods="left">
+        <div class="remodal-overlay"></div>
+        <div elem="col" mods="left" class="js-have-popover">
           <div elem="body">
             <div elem="user-info">
               <div elem="user-pic"><img src="img/what-need-pic.png" alt=""></div>
@@ -13,18 +14,61 @@
               </div>
             </div>
           </div>
+          <div block="popover-user" mods="status" class="">
+            <button elem="button-close" class="js-button-status-ok" type="button"></button>
+            <div elem="section">
+              <div elem="inner">
+                <div elem="text">
+                  <p>
+                    Ваш статус: <strong>Flip-er</strong> <i class="status-pic"><img src="img/what-need-pic.png" alt=""></i>
+                  </p>
+                  <p style="margin-bottom: 0;">
+                    Вы можете повысить статус.
+                  </p>
+                  <ol>
+                    <li>Если у вас есть Синие фишки - вы можете получить статус <span>ОG.</span></li>
+                    <li>Если вы готовы стать частью сообщества - вы можете получить статус <span>Woof List</span></li>
+                    <li>Ну а сесли у вас есть резерв средств - вы получите статус <span>Earlibird</span></li>
+                  </ol>
+                </div>
+                <button elem="button-ok" class="button-default button-default--popup"
+                  type="button"><span>Запросить новый статус</span></button>
+              </div>
+            </div>
+          </div><!-- popover-user -->
         </div>
-        <div elem="col" mods="middle">
+        <div elem="col" mods="middle" class="js-have-popover">
           <div elem="body">
             <div elem="note">Ваш код для приглашения других пользователей:</div>
             <div elem="code">
               <strong>GROSSESH1ANGE</strong>
               <div elem="control">
-                <a elem="control-link" mods="copy" data-remodal-target="copy_code" href="#"><span>Copy</span></a>
+                <a elem="control-link" mods="copy" href="#"><span>Copy</span></a>
                 <a elem="control-link" mods="edit" href="#"><span>Edit</span></a>
               </div>
             </div>
           </div>
+          <div block="popover-user" mods="code">
+            <button elem="button-close" class="js-button-code-ok" type="button"></button>
+            <div elem="section">
+              <div elem="inner">
+                <div elem="text">
+                  <p>
+                    Вы можете раздавать этот код другим людям, что бы они могли у нас регистрироваться. При минте, вы получите
+                    <span>50%</span> от суммы,
+                    уплаченной приглашёнными.
+                  </p>
+                  <p>
+                    Нап ример если приглашённый <br>
+                    уплатил 1 <i><img src="img/local-currency-icon.svg" alt=""></i>  вы получите 0.5 <i><img
+                        src="img/local-currency-icon.svg" alt=""></i>
+                  </p>
+                </div>
+                <button elem="button-ok" class="button-default button-default--popup js-button-code-ok" 
+                  type="button"><span>Понятно</span></button>
+              </div>
+            </div>
+          </div><!-- popover-user -->
         </div>
         <div elem="col" mods="right">
           <div elem="body">
@@ -84,24 +128,4 @@
       </div>
     </div>
   </div>
-  <div block="popup-note" class="remodal" data-remodal-id="copy_code">
-    <button elem="button-close" data-remodal-action="close" class="remodal-close"
-      type="button"></button>
-    <div elem="section">
-      <div elem="inner">
-        <div elem="text">
-          <p>
-            Вы можете раздавать этот код другим людям, что бы они могли у нас регистрироваться. При минте, вы получите <span>50%</span> от суммы,
-            уплаченной приглашёнными.
-          </p>
-          <p>
-            Например если приглашённый <br>
-            уплатил 1 <i><img src="img/local-currency-icon.svg" alt=""></i>  вы получите 0.5 <i><img src="img/local-currency-icon.svg" alt=""></i>
-          </p>
-        </div>
-        <button elem="button-ok" class="button-default button-default--popup"
-          data-remodal-action="close" type="button"><span>Понятно</span></button>
-      </div>
-    </div>
-  </div><!-- popup-note -->
 </div><!-- user-panel -->

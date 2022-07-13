@@ -17,7 +17,6 @@ html
     flex-direction: column
     min-height: 100%
     min-height: 100vh
-    overflow-x: hidden
 
   &__content
     display: flex
@@ -25,6 +24,33 @@ html
 
   &__main
     flex: 1
+
+  &._is-not-supported-browser
+    .header
+      &:after
+        background-color: #fff
+
+    .hero
+      margin-top: 0
+
+    .road-map__read-link
+      background-color: rgba(255, 255, 255, 0.9)
+
+    .price-info__table
+      @media (min-width: 960px)
+        background-color: rgba(255, 255, 255, 0.8)
+
+    .video-preview__button-play
+      background-color: rgba(147, 147, 147, 0.9)
+
+    .header__mobile-panel
+      background-color: rgba(255, 255, 255, 0.9)
+
+    .first-screen__social
+      background-color: rgba(255, 255, 255, 0.9)
+
+    .remodal-overlay
+      background-color: rgba(38, 38, 38, 0.9)
 
 .button-default
   color: #FFF
@@ -61,7 +87,7 @@ html
 
     &:after
       content: ''
-      width: 95px
+      width: 80%
       height: 35px
       position: absolute
       bottom: -18px

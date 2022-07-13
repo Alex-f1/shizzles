@@ -5,8 +5,6 @@ function initPopupNote() {
     setSessionStoragePopupNote = sessionStorage.setItem('popup_note', 'ok');
   });
 
-  console.log(sessionStorage.getItem("popup_note"))
-
   if (sessionStorage.getItem("popup_note") == null && sessionStorage.getItem("popup_note") != 'ok') {
     setTimeout(function () {
       const popupNote = $('[data-remodal-id=note]').remodal();
@@ -15,4 +13,6 @@ function initPopupNote() {
   }
 }
 
-initPopupNote();
+if ($('.popup-note').length) {
+  initPopupNote();
+}

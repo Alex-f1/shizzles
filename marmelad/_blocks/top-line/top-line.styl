@@ -1,12 +1,49 @@
 .top-line
+  width: 100%
   height: 150px
   background-color: rgba(255, 255, 255, 0.63)
   backdrop-filter: blur(38px)
-  position: relative
-  z-index: 100
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 500
+  transition: height 0.3s, background-color 0.3s, ease 0.3s
 
   @media (max-width: 959px)
     height: 75px
+
+  &._is-fixed
+    box-shadow: 0px -4px 11px rgba(255, 255, 255, 0.97), 0px 4px 8px #ccdcf2
+    height: 100px
+    background-color: rgba(255, 255, 255, 0.9)
+
+    @media (max-width: 959px)
+      height: 75px
+
+    & ^[0]
+      &__button-video
+        display: none
+
+        &--fixed
+          @media (min-width: 960px)
+            display: flex !important
+
+      &__date
+        @media (min-width: 960px)
+          transform: translateY(-150px)
+          opacity: 0
+          visibility: hidden
+
+      &__right
+        .social-links, .top-line__language
+          @media (min-width: 960px)
+            display: none
+
+    .logo
+      &__link
+        @media (min-width: 960px)
+          max-width: 150px
+          width: 100%
 
   &__section
     height: 100%
@@ -142,6 +179,9 @@
       text-decoration: underline
       transition: color 0.3s, ease 0.3s
 
+    &--fixed
+      display: none
+
     &:hover
       span
         color: #20B01D
@@ -165,6 +205,7 @@
     line-height: 1
     text-align: center
     transform: translateY(5px)
+    transition: transform 0.3s, opacity 0.3s, ease 0.3s
 
     @media (max-width: 959px)
       display: none
