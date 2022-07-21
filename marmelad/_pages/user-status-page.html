@@ -1,0 +1,207 @@
+= yaml =
+pageTitle: SHIZZLES
+bodyClasses:
+layout: !!map
+  header: false
+  footer: false
+  left: false
+  right: false
+= yaml =
+
+{% extends 'app.html' %}
+
+
+
+{% block main %}
+
+  <div block="connect-block" mods="user-status">
+    <div elem="section">
+      <div elem="inner">
+        <div elem="logo"><img src="img/logo.png" alt=""></div>
+        <div block="status-table">
+          <div elem="section">
+            <div elem="greeting-name">Привет, 0X9f...9e7a!</div>
+            <div elem="table">
+              <table>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Статус</th>
+                    <th>Скидка</th>
+                    <th>Сколько может купить</th>
+                    <th>Время на покупку</th>
+                    <th>Когда минт</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Ваш статус &rarr;</td>
+                    <td>
+                      <span class="status-name">
+                        <span>Flip-er</span>
+                        <button class="button-info js-button-info" data-text="Для регистрации, не обязательно иметь средства на кошелке до минта. Безопано создать новый кошелек без средств для,
+        регистрации, а непосредственно перед минтом перевести необходимую сумму на зарегистрированный кошелк."></button>
+                      </span>
+                    </td>
+                    <td>0%</td>
+                    <td style="font-size: 25px;">&#8734;</td>
+                    <td>7 дней</td>
+                    <td>1 Месяц 10 дней</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <span class="status-name">
+                        <span>Earlibird</span>
+                        <button class="button-info js-button-info" data-text="Для регистрации, не обязательно иметь средства на кошелке до минта. Безопано создать новый кошелек без средств для,
+        регистрации, а непосредственно перед минтом перевести необходимую сумму на зарегистрированный кошелк. Earlibird"></button>
+                      </span>
+                    </td>
+                    <td>60%</td>
+                    <td>2 NFT </td>
+                    <td>6 часов</td>
+                    <td>1 Месяц 10 дней</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <span class="status-name">
+                        <span>Woof List</span>
+                        <button class="button-info js-button-info" data-text="Для регистрации, не обязательно иметь средства на кошелке до минта. Безопано создать новый кошелек без средств для,
+        регистрации, а непосредственно перед минтом перевести необходимую сумму на зарегистрированный кошелк. Woof List"></button>
+                      </span>
+                    </td>
+                    <td>95%</td>
+                    <td>2 NFT </td>
+                    <td>3 часа</td>
+                    <td>1 Месяц 10 дней</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <span class="status-name">
+                        <span>OG</span>
+                        <button class="button-info js-button-info" data-text="Для регистрации, не обязательно иметь средства на кошелке до минта. Безопано создать новый кошелек без средств для,
+        регистрации, а непосредственно перед минтом перевести необходимую сумму на зарегистрированный кошелк. OG"></button>
+                      </span>
+                    </td>
+                    <td>95%</td>
+                    <td>2 NFT </td>
+                    <td>3 часа</td>
+                    <td>1 Месяц 10 дней</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div elem="status-info-text" class="js-status-info-text"></div>
+            </div>
+          </div>
+          <div elem="info-code">
+            <div elem="info-code-item">
+              <span elem="info-code-desc">
+                Ваш код для приглашения других пользователей: <strong>GROSSESH1ANGE</strong>
+              </span>
+              <a elem="button-change" class="button-default button-default--popup" data-remodal-target="change" href="#">
+                <span>Изменить</span>
+              </a>
+            </div>
+            <div elem="info-code-item">
+              <span elem="info-code-desc">
+                По вашему коду зарегистрировалось <strong>0</strong> человек из 3 возможных
+              </span>
+              <a elem="button-change" class="button-default button-default--popup" data-remodal-target="increase" href="#">
+                <span>Увеличить</span>
+              </a>
+            </div>
+          </div>
+          <div elem="links">
+            <a href="#">Зачем нужен код приглашения</a>
+            <a href="#">Как повысить свой статус</a>
+            <a href="#" data-remodal-target="price">Какая цена НФТ</a>
+          </div>
+        </div><!-- status-table -->
+        
+        <div elem="bottom">
+          <a elem="link" href="#">Terms nad Conditions</a>
+          <span>*мы не связаны с Axie infinity, Sky Marvis, BAYC, Azuki</span>
+        </div>
+      </div>
+    </div>
+    <div block="popup-note" mods="change" class="remodal" data-remodal-id="change">
+      <button elem="button-close" class="remodal-close" data-remodal-action="close" type="button"></button>
+      <div elem="section">
+        <div elem="inner">
+          <form elem="form">
+            <div elem="container">
+              <div elem="desc">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, unde?</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+              <div elem="field">
+                <input type="text" placeholder="Введите код" value="GROSSESH1ANGE">
+                <span elem="error">Извините, этот код занят, попробуйте другой.</span>
+              </div>
+              <div elem="buttons">
+                <button elem="button" mods="change" class="button-default button-default--popup" type="submit">
+                  <span>изменить</span>
+                </button>
+                <button elem="button" mods="close" class="button-default button-default--popup" data-remodal-action="close" type="button">
+                  <span>закрыть</span>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div><!-- popup-note -->
+    <div block="popup-note" mods="increase" class="remodal" data-remodal-id="increase">
+      <button elem="button-close" class="remodal-close" data-remodal-action="close" type="button"></button>
+      <div elem="section">
+        <div elem="inner">
+          <form elem="form">
+            <div elem="container">
+              <div elem="desc">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, unde?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab at quaerat, iure ea nihil necessitatibus.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <p>Lorem ipsum dolor sit amet:</p>
+              </div>
+              <div elem="field">
+                <textarea></textarea>
+              </div>
+              <div elem="desc">
+                <p>Lorem ipsum:</p>
+              </div>
+              <div elem="field">
+                <textarea></textarea>
+              </div>
+              <div elem="buttons">
+                <button elem="button" mods="change" class="button-default button-default--popup" type="submit">
+                  <span>запросить</span>
+                </button>
+                <button elem="button" mods="close" class="button-default button-default--popup" data-remodal-action="close"
+                  type="button">
+                  <span>отмена</span>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div><!-- popup-note -->
+    <div block="popup-note" class="remodal" data-remodal-id="price">
+      <button elem="button-close" data-remodal-action="close" class="remodal-close"
+        type="button"></button>
+      <div elem="section">
+        <div elem="inner">
+          <div elem="text">
+            Цена НФТ без скидок равна E0.01
+          </div>
+          <br>
+          <button elem="button-ok" class="button-default button-default--popup"
+            data-remodal-action="close" type="button"><span>Понятно</span></button>
+        </div>
+      </div>
+    </div><!-- popup-note -->
+  </div><!-- connect-block -->
+
+{% endblock %}

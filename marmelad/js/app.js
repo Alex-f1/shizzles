@@ -39,4 +39,21 @@ $(function() {
   }
 
   notSupportedBrowser();
+
+  $('.js-button-info').on('click', function () {
+    let thisElem = $(this);
+    let thisElemDataText = thisElem.data('text');
+    let statusInfoText = $('.js-status-info-text');
+    
+    if (thisElem.hasClass('_is-active')) {
+      thisElem.removeClass('_is-active');
+      statusInfoText.removeClass('_is-show');
+      statusInfoText.text('')
+    } else {
+      thisElem.addClass('_is-active');
+      statusInfoText.addClass('_is-show');
+      thisElem.closest('tr').siblings('tr').find('.js-button-info').removeClass('_is-active');
+      statusInfoText.text(thisElemDataText)
+    }
+  })
 });
