@@ -1,0 +1,65 @@
+= yaml =
+pageTitle: SHIZZLES
+bodyClasses:
+layout: !!map
+  header: false
+  footer: false
+  left: false
+  right: false
+= yaml =
+
+{% extends 'app.html' %}
+
+
+
+{% block main %}
+
+  <div block="connect-block" mods="user">
+    <div elem="section">
+      <div elem="inner">
+        <div elem="logo"><img src="img/logo.png" alt=""></div>
+        <div block="users-found">
+          <div elem="section">
+            <div elem="head">
+              <strong>Всего найдено 3 пользователя</strong>
+              <a href="#">Экспорт в CSV</a>
+            </div>
+            <div elem="table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Номер</th>
+                    <th>Дата</th>
+                    <th>Адрес</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>01 Апрель 2022 14:00</td>
+                    <td>0X9f...9e7a!</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>01 Апрель 2022 14:00</td>
+                    <td>0X9f...9e733</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>01 Апрель 2022 14:00</td>
+                    <td>0X9f...9e7a2</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div><!-- users-found -->
+        <div elem="bottom">
+          <a elem="link" href="#">Terms nad Conditions</a>
+          <span>*мы не связаны с Axie infinity, Sky Marvis, BAYC, Azuki</span>
+        </div>
+      </div>
+    </div>
+  </div><!-- connect-block -->
+
+{% endblock %}
