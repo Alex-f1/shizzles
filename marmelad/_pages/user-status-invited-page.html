@@ -114,8 +114,8 @@ layout: !!map
             </div>
           </div>
           <div elem="links">
-            <a href="#">Зачем нужен код приглашения</a>
-            <a href="#">Как повысить свой статус</a>
+            <a href="#" data-remodal-target="need_code">Зачем нужен код приглашения</a>
+            <a href="#" data-remodal-target="your_status">Как повысить свой статус</a>
             <a href="#" data-remodal-target="price">Какая цена НФТ</a>
           </div>
         </div><!-- status-table -->
@@ -154,6 +154,33 @@ layout: !!map
       </div>
     </div><!-- popup-note -->
     
+    <div block="popup-note" mods="your-status" class="remodal" data-remodal-id="your_status">
+      <button elem="button-close" data-remodal-action="close" class="js-button-note-close remodal-close"
+        type="button"></button>
+      <div elem="section">
+        <div elem="inner">
+          <div elem="text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, cumque numquam, soluta rerum, officia voluptates
+            inventore placeat blanditiis distinctio autem cupiditate quidem vel dolor sequi fuga quam nemo nobis vitae!
+          </div>
+          <button elem="button-ok" class="button-default button-default--popup" data-remodal-target="request"
+            type="button"><span>Запросить OG</span></button>
+          <div elem="text">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, repudiandae perferendis sapiente animi
+            distinctio minus deserunt corporis dicta quam? Ea doloremque laudantium ipsa libero quaerat odio illo ratione
+            eaque rerum nostrum a, itaque, esse harum.
+          </div>
+          <button elem="button-ok" class="button-default button-default--popup" data-remodal-target="request"
+            type="button"><span>Запросить Contributor</span></button>
+          <div elem="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem assumenda molestias exercitationem qui provident
+            possimus. Recusandae optio repellat architecto aut.
+          </div>
+          <button elem="button-ok" class="button-default button-default--popup" data-remodal-target="request"
+            type="button"><span>Запросить EarlyBird</span></button>
+        </div>
+      </div>
+    </div><!-- popup-note -->
     <div block="popup-note" class="remodal" data-remodal-id="price">
       <button elem="button-close" data-remodal-action="close" class="remodal-close"
         type="button"></button>
@@ -165,6 +192,73 @@ layout: !!map
           <br>
           <button elem="button-ok" class="button-default button-default--popup"
             data-remodal-action="close" type="button"><span>Понятно</span></button>
+        </div>
+      </div>
+    </div><!-- popup-note -->
+    <div block="popup-note" mods="request" class="remodal" data-remodal-id="request">
+      <button elem="button-close" class="remodal-close" data-remodal-action="close" type="button"></button>
+      <div elem="section">
+        <div elem="inner">
+          <form elem="form">
+            <div elem="container">
+              <div elem="desc">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, unde?</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis amet error dolore. Autem, nostrum
+                  eveniet.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+              <div elem="field">
+                <label for="">Ваше имя пользователя твиттер</label>
+                <input type="text" placeholder="Веддите имя">
+              </div>
+              <div elem="field">
+                <label for="">Ваше имя пользователя дискорд</label>
+                <input type="text" placeholder="Веддите имя">
+              </div>
+              <div elem="buttons">
+                <button elem="button" mods="change" class="button-default button-default--popup"
+                  data-remodal-target="received" type="button">
+                  <span>запросить</span>
+                </button>
+                <button elem="button" mods="close" class="button-default button-default--popup" data-remodal-action="close"
+                  type="button">
+                  <span>отмена</span>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div><!-- popup-note -->
+    <div block="popup-note" class="remodal" data-remodal-id="received">
+      <button elem="button-close" data-remodal-action="close" class="remodal-close" type="button"></button>
+      <div elem="section">
+        <div elem="inner">
+          <div elem="text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, unde?</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis amet error dolore. Autem, nostrum eveniet.
+            </p>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+          <br>
+          <button elem="button-ok" class="button-default button-default--popup" data-remodal-action="close"
+            type="button"><span>Понятно</span></button>
+        </div>
+      </div>
+    </div><!-- popup-note -->
+    <div block="popup-note" class="remodal" data-remodal-id="need_code">
+      <button elem="button-close" data-remodal-action="close" class="remodal-close" type="button"></button>
+      <div elem="section">
+        <div elem="inner">
+          <div elem="text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, unde?</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+          <br>
+          <button elem="button-ok" class="button-default button-default--popup" data-remodal-action="close"
+            type="button"><span>Понятно</span></button>
         </div>
       </div>
     </div><!-- popup-note -->
